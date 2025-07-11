@@ -107,7 +107,7 @@ const handleLogout = () => {
                         ))
                       }
                     </div>
-                    <div className={`${logout ? "w-[320px] pl-[20px] pr-[32px] z-50 opacity-100" : "w-0 p-0 -z-50 opacity-0"} transition-all duration-200 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-64   flex flex-col w-[320px] font-inter  gap-[30px] py-[24px] rounded-[12px]`}>
+                    <div className={`${logout ? "w-[320px] pl-[20px] pr-[32px] z-50 opacity-100" : "w-0 p-0 -z-50 opacity-0"} transition-all duration-200 bg-white absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-56   flex flex-col w-[320px] font-inter  gap-[30px] py-[24px] rounded-[12px]`}>
                       <div className="flex flex-col gap-[14px]">
                       <h1 className="font-semibold text-xl leading-[120%]">Log Out</h1>
                       <p className=" text-base leading-[130%] text-darkGray">Are you sure you want to log out from your account?</p>
