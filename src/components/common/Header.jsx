@@ -1,0 +1,113 @@
+import "./header.css"
+import pages from "../../json/Header.json"
+import { Link, NavLink } from "react-router-dom"
+import { useState } from "react"
+const Header = () => {
+  const [Click, setClick] = useState(false)
+  const [dashbord, setdashbord] = useState(false)
+  console.log(dashbord)
+  const handleDashboardClick = () => {
+    setdashbord(true);
+    setClick(false);
+  };
+
+  const handleClick = () => {
+    setClick(true);
+    setdashbord(false);
+  };
+  return (
+    <>
+      <header>
+        <section className=" relative">
+          <div onClick={() => setClick(false) || setdashbord(false)} className={`w-[100%] absolute  h-screen bg-[#00000048] z-10 ${Click || dashbord ? "block " : "hidden"}`}></div>
+
+          <div className='container '>
+            <div className="flex justify-between items-center w-full sm:py-[35px] pt-[40px]">
+
+              {/* head icon */}
+              <Link to={"/"} className="flex justify-between items-center sm:max-w-[173px] max-w-[140px] w-full">
+
+                <img className="sm:w-[34px] sm:h-[30px] w-[27px] h-[24px]" src={"/images/headlogo.png"} alt="headicon" />
+                <h1 className="font-inter font-semibold sm:text-xl text-base ">Cowork Mate</h1>
+              </Link>
+              {/* head pages */}
+              <div className="lg:flex justify-between hidden items-center max-w-[442px] w-full font-inter text-lg font-normal ">
+                {
+                  pages.pages.map((item, index) => (
+                    <NavLink to={item.path} >
+                      {item.title}
+                    </NavLink>
+                  ))
+                }
+              </div>
+              {/* profile bar */}
+              <div className="flex justify-between items-center sm:max-w-[151px] sm:w-full z-50">
+                {
+                  pages.images.map((item, index) => (
+                    <div className="sm:block hidden" key={index}>
+                      {
+                        index === 1 ? <img onClick={() => setdashbord(!dashbord)} className={`cursor-pointer z-50`} src={item.pathimg} alt="images" /> : <img className="cursor-pointer" src={item.pathimg} alt="images" />
+
+
+                      }
+                    </div>
+                  ))
+                }
+                {/* button menu bar */}
+                <button className="grid sm:hidden  z-50 lg:hidden w-[18px] justify-end  h-[15px] items-center   relative cursor-pointer" onClick={() => handleClick() || setClick(!Click)}>
+                  <p className={`${Click || dashbord ? "-rotate-45 absolute  z-50 bg-white" : "-rotate-0 z-0 bg-black"} transition-all    w-[18px] h-[2px] duration-500`} ></p>
+                  <span className={`${Click || dashbord ? "bg-transparent" : " bg-black"} w-[18px]  h-[2px] bg-black  transition-all duration-75 `} ></span>
+                  <p className={`${Click || dashbord ? "rotate-45 absolute  z-50 bg-white" : "rotate-0 absolute  z-0 bg-black"}  transition-all   w-[18px]  h-[2px]  duration-500`}></p>
+                </button>
+                {/* popup bar */}
+                <div className={`absolute ${Click ? "w-[270px] opacity-100 text-xl pl-[20px] z-50" : "w-0 p-0 text-[0px] -z-50 opacity-0"} font-inter  flex flex-col gap-[14px]  transition-all duration-200 sm:hidden  top-16 pt-[20px] pb-[32px]   bg-white rounded-md right-5`}>
+                  {
+                    pages.pagespoup.map((item, index) => (
+                      <NavLink onClick={() => setClick(false)} to={item.path} >
+                        {
+                          index === 5 ? (<>
+                            <h1 onClick={() => handleDashboardClick()} className={"flex flex-col  "}>{item.title}</h1> </>)
+                            :
+                            (<>
+                              <h1 className={"flex flex-col pb-5 border-b border-[#38356133] "}>{item.title}</h1>
+                            </>)
+
+                        }
+
+
+                      </NavLink>
+                    ))
+                  }
+                </div>
+              </div>
+              {/* Dashbord bar */}
+              <div className={`${dashbord ? "w-[270px] opacity-100 text-xl pl-[20px] z-50" : "w-0 p-0 text-[0px] -z-50 opacity-0"} font-inter  flex flex-col gap-[12px] cursor-pointer  transition-all  duration-200 absolute top-16 pt-[20px] pb-[32px]   bg-white rounded-md right-5 sm:right-60 sm:top-16`}>
+                {
+                  pages.accountdails.map((item, index) => (
+                    <Link onClick={() => setdashbord(false)} className={`${dashbord ? "text-xl" : "text-[0px]"} flex gap-[20px] font-inter  leading-[140%] pb-[21px] border-b border-[#38356133]`} to={item.path} key={index}>
+                      <div className="bg-lightGray rounded-full w-[30px] h-[30px] flex justify-center items-center">
+                        {
+                          index === 0 || index === 2 ? <img className="w-[16px] h-[16px]   " src={item.pathimg} alt="images" /> : <img className="w-[30px] h-[30px]" src={item.pathimg} alt="images" />
+                        }</div>
+
+                      <h4>{item.title}</h4>
+                    </Link>
+                  ))
+                }
+              </div>
+              <div className="flex flex-col py-[24px] pl-[20px] pr-[32px] rounded-[12px]">
+                <h1>Log Out</h1>
+                <p>Are you sure you want to log out from your account?</p>
+                <div className="">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+    </>
+  )
+}
+
+export default Header
