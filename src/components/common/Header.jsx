@@ -7,21 +7,32 @@ const Header = () => {
   const [Click, setClick] = useState(false);
   const [dashbord, setdashbord] = useState(false);
   const [logout, setlogout] = useState(false);
+  const [notification, setnotification] = useState(false);
   console.log(dashbord);
   const handleDashboardClick = () => {
     setdashbord(true);
     setClick(false);
     setlogout(false);
+    setnotification(false)
   };
 
   const handleClick = () => {
     setClick(true);
     setdashbord(false);
     setlogout(false);
+    setnotification(false)
+
   };
 
   const handleLogout = () => {
     setlogout(true);
+    setdashbord(false);
+    setClick(false);
+    setnotification(false)
+  };
+    const handlenotify = () => {
+      setnotification(true)
+    setlogout(false);
     setdashbord(false);
     setClick(false);
   };
@@ -31,10 +42,10 @@ const Header = () => {
         <section className=" ">
           <div
             onClick={() =>
-              setClick(false) || setdashbord(false) || setlogout(false)
+              setClick(false) || setdashbord(false) || setlogout(false) || setnotification(false)
             }
             className={`w-[100%] absolute  h-screen bg-[#00000048] z-10 ${
-              Click || dashbord || logout ? "block " : "hidden"
+              Click || dashbord || logout || notification ? "block " : "hidden"
             }`}
           ></div>
 
@@ -63,15 +74,19 @@ const Header = () => {
               {/* profile bar */}
               <div className="flex relative justify-between items-center sm:max-w-[151px] sm:w-full z-50">
                 {pages.images.map((item, index) => (
-                  <div className="sm:block hidden" key={index}>
+                  <div className="sm:block hidden z-50" key={index}>
                     {index === 1 ? (
                       <img
-                        onClick={() => setdashbord(!dashbord)}
-                        className={`cursor-pointer z-50`}
+                        onClick={() => setdashbord(!dashbord) || setnotification(false)}
+                        className={`cursor-pointer `}
                         src={item.pathimg}
                         alt="images"
                       />
-                    ) : (
+                    ) : index === 0 ?  <img onClick={()=>setnotification(!notification) || setdashbord(false)}
+                        className="cursor-pointer "
+                        src={item.pathimg}
+                        alt="images"
+                      /> : (
                       <img
                         className="cursor-pointer"
                         src={item.pathimg}
@@ -142,39 +157,47 @@ const Header = () => {
                 <div
                   className={`${
                     dashbord
-                      ? "w-[270px] opacity-100 text-xl  z-50"
-                      : "w-0 p-0 text-[0px] -z-50 opacity-0"
-                  } font-inter  flex flex-col pl-[20px]  gap-[12px] cursor-pointer  transition-all  duration-200 absolute top-8 pt-[20px] pb-[32px]   bg-white rounded-md right-2 `}
+                      ? " opacity-100 text-xl  z-50"
+                      : " p-0 text-[0px] -z-50 opacity-0"
+                  } font-inter  flex flex-col pl-[20px] w-[270px] gap-[12px] cursor-pointer  transition-all  duration-200 absolute top-8 pt-[20px] pb-[32px]   bg-white rounded-md right-2 `}
                 >
                   {pages.accountdails.map((item, index) => (
                     <Link
                       onClick={() => setdashbord(false)}
                       className={`${
                         dashbord ? "text-xl" : "text-[0px]"
-                      } flex gap-[20px] font-inter  leading-[140%] pb-[21px] border-b border-[#38356133]`}
+                      } border-b border-[#38356133]`}
                       to={item.path}
                       key={index}
                     >
-                      <div className="bg-lightGray rounded-full w-[30px] h-[30px] flex justify-center items-center">
-                        {index === 0 || index === 2 ? (
+                      {
+                        index === 5 ?
+                         <div onClick={()=>handleLogout()} className=" flex gap-[20px] font-inter  leading-[140%] pb-[21px]     items-center">
                           <img
-                            className="w-[16px] h-[16px]   "
+                            className="w-[30px] rounded-full  bg-lightGray h-[30px] "
                             src={item.pathimg}
                             alt="images"
                           />
-                        ) : (
+                       <h4>{item.title}</h4> 
+                      </div> : index === 2 ? 
+                       <div onClick={()=> handlenotify()} className=" flex gap-[20px] font-inter  leading-[140%] pb-[21px]     items-center">
                           <img
-                            className="w-[30px] h-[30px]"
+                            className="w-[30px] rounded-full bg-lightGray h-[30px] "
                             src={item.pathimg}
                             alt="images"
                           />
-                        )}
+                       <h4>{item.title}</h4> 
+                      </div> :
+                       <div className=" flex gap-[20px] font-inter  leading-[140%] pb-[21px]  rounded-full    items-center">
+                          <img
+                            className="w-[30px] bg-lightGray h-[30px] "
+                            src={item.pathimg}
+                            alt="images"
+                          />
+                       <h4>{item.title}</h4> 
                       </div>
-                      {index === 5 ? (
-                        <h4 onClick={() => handleLogout()}>{item.title}</h4>
-                      ) : (
-                        <h4>{item.title}</h4>
-                      )}
+                      }
+                      
                     </Link>
                   ))}
                 </div>
@@ -182,9 +205,9 @@ const Header = () => {
                 <div
                   className={`${
                     logout
-                      ? "w-[320px] pl-[20px] pr-[32px] z-50 opacity-100"
-                      : "w-0 p-0 -z-50 opacity-0"
-                  } transition-all duration-200 bg-white absolute top-8 right-2   flex flex-col w-[320px] font-inter  gap-[30px] py-[24px] rounded-[12px]`}
+                      ? " pl-[20px] pr-[32px] z-50 opacity-100"
+                      : " p-0 -z-50 opacity-0"
+                  } w-[320px] transition-all duration-200 bg-white absolute top-8 right-2   flex flex-col  font-inter  gap-[30px] py-[24px] rounded-[12px]`}
                 >
                   <div className="flex flex-col gap-[14px]">
                     <h1 className="font-semibold text-xl leading-[120%]">
@@ -202,15 +225,38 @@ const Header = () => {
                     <CustomButton children={"Log Out"} type="gradient" />
                   </div>
                 </div>
-              </div>
                   {/* notification popup */}
-                   <div className="w-[319px] pt-[23px] pb-[88px]  rounded-md bg-white ">
+                   <div className={`${notification ? " z-50 opacity-100" :" -z-50 opacity-0" } transition-all duration-200 w-[319px] absolute right-3 top-8  pt-[23px] pb-[88px]  rounded-md bg-white `}>
                      <div className=" flex pr-[20px]  pl-[20px] pb-[22px] border-b border-[#38356133] justify-between items-center ">
-                          <h4 className="font-inter font-medium text-[18px] leading-[130%] ">Notifications</h4>
-                          <button className="font-inter font-medium text-[16px] leading-[130%] text-golden">Clear All</button>
+                          <h4 className={`${notification ? "text-[18px]" : "text-[0px]"} font-inter font-medium  leading-[130%] `}>Notifications</h4>
+                          <button className={`${notification ? "text-[16px]" : "text-[0px]"} font-inter font-medium  leading-[130%] text-golden`}>Clear All</button>
                      </div>
-                     <div className="pr-[20px]  pl-[20px] font-inter"></div>
+                     <div className="pr-[15px] flex  pt-[20px] flex-col pl-[15px] font-inter">
+                      {
+                        pages.notify.map((item,index)=>(
+                          <>
+                          {
+                            index ===2 ? <div className="flex gap-[22px] items-start font-inter ">
+                           <img src={item.img} alt="" />
+                         <div className="flex flex-col gap-[8px] ">
+                            <h4 className="text-[14px] font-inter  leading-[140%]">{item.titile}</h4>
+                            <h4 className="text-[12px] text-darkGray font-medium  leading-[140%">{item.time}</h4>
+                         </div></div> : 
+                         <div className="flex gap-[22px] items-start font-inter pb-[16px] border-b border-[#38356133] mb-[24px]">
+                           <img src={item.img} alt="" />
+                         <div className="flex flex-col gap-[8px] ">
+                            <h4 className="text-[14px] font-inter  leading-[140%]">{item.titile}</h4>
+                            <h4 className="text-[12px] text-darkGray font-medium  leading-[140%">{item.time}</h4>
+                         </div></div>
+                          }
+                          
+                          </>
+                        ))
+                      }
+                        
+                     </div>
                    </div>
+              </div>
             </div>
           </div>
         </section>
