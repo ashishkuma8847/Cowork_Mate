@@ -68,7 +68,7 @@ const Header = () => {
               {/* head pages */}
               <div className="lg:flex justify-between hidden items-center max-w-[442px] w-full font-inter text-lg font-normal ">
                 {pages.pages.map((item, index) => (
-                  <NavLink to={item.path}>{item.title}</NavLink>
+                  <NavLink key={item+index} to={item.path}>{item.title}</NavLink>
                 ))}
               </div>
               {/* profile bar */}
@@ -129,7 +129,8 @@ const Header = () => {
                   } font-inter  flex flex-col gap-[14px]  transition-all duration-200 sm:hidden  top-8 pt-[20px] pb-[32px]   bg-white rounded-md right-1`}
                 >
                   {pages.pagespoup.map((item, index) => (
-                    <NavLink onClick={() => setClick(false)} to={item.path}>
+                    
+                    <NavLink key={index+item} onClick={() => setClick(false)} to={item.path}>
                       {index === 5 ? (
                         <>
                           <h1
@@ -217,12 +218,13 @@ const Header = () => {
                       Are you sure you want to log out from your account?
                     </p>
                   </div>
-                  <div className="flex gap-[10px]">
+                  <div className="flex gap-[10px] justify-center">
                     <CustomButton
                       onClick={() => setlogout(false)}
                       children={"Cancle"}
+                      className="py-[14px] px-[32px]"
                     />
-                    <CustomButton children={"Log Out"} type="gradient" />
+                    <CustomButton className="py-[14px] px-[32px]" children={"Log Out"} type="gradient" />
                   </div>
                 </div>
                   {/* notification popup */}
@@ -234,7 +236,7 @@ const Header = () => {
                      <div className="pr-[15px] flex  pt-[20px] flex-col pl-[15px] font-inter">
                       {
                         pages.notify.map((item,index)=>(
-                          <>
+                          <div key={index + item}>
                           {
                             index ===2 ? <div className="flex gap-[22px] items-start font-inter ">
                            <img src={item.img} alt="" />
@@ -250,7 +252,7 @@ const Header = () => {
                          </div></div>
                           }
                           
-                          </>
+                          </div>
                         ))
                       }
                         

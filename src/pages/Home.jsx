@@ -1,7 +1,9 @@
+import FindWorkspace from "../components/home/FindWorkspace"
+
 const Home = () => {
   return (
     <>
-    <div className=" ">Home</div>
+    <FindWorkspace/>
     </>
   )
 }
