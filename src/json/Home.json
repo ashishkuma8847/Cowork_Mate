@@ -1,0 +1,19 @@
+{
+    "HowItWorks":[
+        {
+            "img":"/svg/mdi_location.svg",
+            "title":"Browse & Select",
+            "paragraph":"Search by city, filter by amenities, and discover the perfect space."
+        },
+        {
+            "img":"/svg/dark_date.svg",
+            "title":"Choose Your Time",
+            "paragraph":"Search by city, filter by amenities, and discover the perfect space."
+        },
+        {
+            "img":"/svg/check.svg",
+            "title":"Check In & Focus",
+            "paragraph":"Arrive, connect to Wi-Fi, grab coffee, and start being productive!"
+        }
+    ]
+}

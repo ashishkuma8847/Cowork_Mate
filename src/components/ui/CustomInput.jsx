@@ -27,7 +27,7 @@ const CustomInput = ({
       )}
     >
       {renderIconOrImage() && (
-        <div className="mx-2">
+        <div className="">
           {renderIconOrImage()}
         </div>
       )}

@@ -14,11 +14,11 @@ const FindWorkspace = () => {
              
               <div className="md:pt-[30px] md:pr-[24px] flex flex-col gap-[27px] md:pb-[30px] md:pl-6 py-5 px-5 xl:max-w-[563px] w-full">
                  <div className="flex justify-between">
-                    <CustomInput iconClass="lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]" className="lg:max-w-[228px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[135px] w-full text-black" image={"/svg/location.svg"} placeholder="Enter city or area" type="text" />
-                    <CustomInput  className="lg:max-w-[255px]  p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[140px]  w-full text-black" image={"/svg/date.svg"} placeholder="Select date" type="number"/>
+                    <CustomInput iconClass="lg:w-[24px] lg:h-[24px]  w-[16px] h-[16px]" className="md:max-w-[228px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] flex gap-[10px] lg:text-[18px] lg:leading-[130%] max-w-[135px] w-full text-black" image={"/svg/location.svg"} placeholder="Enter city or area" type="text" />
+                    <CustomInput  className="md:max-w-[255px] flex gap-[10px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[140px]  w-full text-black" image={"/svg/date.svg"} placeholder="Select date" type="number"/>
                  </div>
-                 <div className="flex justify-between">
-                    <CustomInput  className="lg:w-[343px] text-[10px] font-normal  p-[12px_0_12px_14px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] w-[155px] text-black" image={"/svg/user-round.svg"} placeholder="1 person" type="number"/>
+                 <div className="flex gap-[20px] md:justify-between">
+                    <CustomInput  className="md:w-[343px] w-[155px] flex gap-[10px] text-[10px] font-normal  p-[12px_0_12px_14px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%]  text-black" image={"/svg/user-round.svg"} placeholder="1 person" type="number"/>
                     <CustomButton className="px-[40px]  py-[12px]  text-xs lg:text-lg leading-[130%]" children={"Search"} type="gradient"/>
                  </div>
                  <div className="lg:flex hidden gap-[32px] ">
@@ -27,7 +27,7 @@ const FindWorkspace = () => {
                  </div>
               </div>
             </div>
-            <img className="z-40 xl:translate-x-16  xl:w-[666px] xl:rounded-none rounded-[24px] xl:h-[688px] md:w-[566px] md:h-[588px] w-[335px] h-[316px]"  src="/images/full-shot-students.png" alt="full-shot-students" />
+            {/* <img className="z-40 xl:translate-x-16  xl:w-[666px] xl:rounded-none rounded-[24px] xl:h-[688px] md:w-[566px] md:h-[588px] w-[335px] h-[316px]"  src="/images/full-shot-students.png" alt="full-shot-students" /> */}
         </div>
     </div>
    </section>
