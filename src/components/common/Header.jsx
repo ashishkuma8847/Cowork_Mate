@@ -50,7 +50,7 @@ const Header = () => {
           ></div>
 
           <div className="container ">
-            <div className="flex justify-between items-center w-full sm:py-[35px] pt-[40px]">
+            <div className="flex justify-between items-center w-full sm:py-[35px] pb-[18px] pt-[40px]">
               {/* head icon */}
               <Link
                 to={"/"}
@@ -210,7 +210,7 @@ const Header = () => {
                       : " p-0 -z-50 opacity-0"
                   } w-[320px] transition-all duration-200 bg-white absolute top-8 right-2   flex flex-col  font-inter  gap-[30px] py-[24px] rounded-[12px]`}
                 >
-                  <div className="flex flex-col gap-[14px]">
+                  <div className="flex flex-col gap-[14px] ">
                     <h1 className="font-semibold text-xl leading-[120%]">
                       Log Out
                     </h1>
@@ -222,9 +222,9 @@ const Header = () => {
                     <CustomButton
                       onClick={() => setlogout(false)}
                       children={"Cancle"}
-                      className="py-[14px] px-[32px]"
+                      className="py-[14px] px-[32px] font-medium text-sm leading-[100%]" 
                     />
-                    <CustomButton className="py-[14px] px-[32px]" children={"Log Out"} type="gradient" />
+                    <CustomButton className="py-[14px] px-[32px] font-medium text-sm leading-[100%]" children={"Log Out"} type="gradient" />
                   </div>
                 </div>
                   {/* notification popup */}

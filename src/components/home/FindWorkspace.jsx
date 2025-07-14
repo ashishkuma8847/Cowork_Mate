@@ -6,28 +6,28 @@ const FindWorkspace = () => {
    <>
    <section>
     <div className="container">
-        <div className="flex  pb-[68px]  w-full justify-between  font-inter items-center">
-            <div className="flex flex-col gap-[30px] xl:gap-[40px] max-w-[659px]">
-                <div className="flex flex-col gap-4"> 
-                    <h4 className='font-medium xl:text-[64px] lg:text-[54px]  left-[120%]'>Find Your Perfect Workspace, Anytime.</h4>
-              <p className='xl:text-[24px] lg:text-[20px] max-w-[520px] w-full text-darkGray left-[130%]'>Discover and book coworking spaces that match your style and needs.</p></div>
+        <div className="flex  pb-[68px] xl:flex-row flex-col-reverse    w-full gap-[24px] xl:justify-between  font-inter items-center">
+            <div className="flex flex-col gap-[30px]  md:gap-[40px] max-w-[659px]">
+                <div className="flex flex-col gap-3 md:gap-4"> 
+                    <h4 className='font-medium xl:text-[64px] lg:text-[54px] text-[32px]  leading-[120%]'>Find Your Perfect Workspace, Anytime.</h4>
+              <p className='xl:text-[24px] lg:text-[20px] text-sm max-w-[520px] w-full text-darkGray left-[130%]'>Discover and book coworking spaces that match your style and needs.</p></div>
              
-              <div className="pt-[30px] pr-[24px] flex flex-col gap-[27px] pb-[30px] pl-6 md:max-w-[263px] xl:max-w-[563px] w-full">
+              <div className="md:pt-[30px] md:pr-[24px] flex flex-col gap-[27px] md:pb-[30px] md:pl-6 py-5 px-5 xl:max-w-[563px] w-full">
                  <div className="flex justify-between">
-                    <CustomInput className="xl:max-w-[228px] max-w-[135px] w-full text-black" image={"/svg/location.svg"} placeholder="Enter city or area" type="text" />
-                    <CustomInput  className="xl:max-w-[255px] max-w-[140px]  w-full text-black" image={"/svg/date.svg"} placeholder="Select date" type="number"/>
+                    <CustomInput iconClass="lg:w-[24px] lg:h-[24px] w-[16px] h-[16px]" className="lg:max-w-[228px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[135px] w-full text-black" image={"/svg/location.svg"} placeholder="Enter city or area" type="text" />
+                    <CustomInput  className="lg:max-w-[255px]  p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[140px]  w-full text-black" image={"/svg/date.svg"} placeholder="Select date" type="number"/>
                  </div>
                  <div className="flex justify-between">
-                    <CustomInput  className="xl:w-[343px] max-w-[155px] text-black" image={"/svg/user-round.svg"} placeholder="1 person" type="number"/>
-                    <CustomButton className="px-[40px] py-[12px]" children={"Search"} type="gradient"/>
+                    <CustomInput  className="lg:w-[343px] text-[10px] font-normal  p-[12px_0_12px_14px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] w-[155px] text-black" image={"/svg/user-round.svg"} placeholder="1 person" type="number"/>
+                    <CustomButton className="px-[40px]  py-[12px]  text-xs lg:text-lg leading-[130%]" children={"Search"} type="gradient"/>
                  </div>
-                 <div className="flex gap-[32px]">
-                    <CustomButton className="px-[40px] py-[20px]" children={"Explore Workspaces"} type="gradient"/>
-                    <CustomButton className="px-[40px] py-[20px]" children={"Log In"} type="gradient"/>
+                 <div className="lg:flex hidden gap-[32px] ">
+                    <CustomButton className="px-[40px] py-[20px] text-xl leading-[130%] " children={"Explore Workspaces"} type="gradient"/>
+                    <CustomButton className="px-[40px] py-[20px] text-xl leading-[130%]" children={"Log In"} type="gradient"/>
                  </div>
               </div>
             </div>
-            <img className="z-40 lg:translate-x-16 xl:w-[666px] xl:h-[688px] lg:w-[566px] lg:h-[588px]"  src="/images/full-shot-students.png" alt="full-shot-students" />
+            <img className="z-40 xl:translate-x-16  xl:w-[666px] xl:rounded-none rounded-[24px] xl:h-[688px] md:w-[566px] md:h-[588px] w-[335px] h-[316px]"  src="/images/full-shot-students.png" alt="full-shot-students" />
         </div>
     </div>
    </section>

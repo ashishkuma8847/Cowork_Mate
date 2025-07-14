@@ -35,7 +35,7 @@ const CustomInput = ({
         type={type}
         placeholder={placeholder}
         className={clsx(
-          "bg-transparent outline-none font-inter text-darkGray placeholder:text-gray-500 text-sm w-full",
+          "bg-transparent outline-none border-none  font-inter text-darkGray placeholder:text-gray-500 leading-[130%] text-[10px] lg:text-lg  w-full",
           inputClass
         )}
         {...props}
