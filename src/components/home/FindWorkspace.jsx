@@ -6,11 +6,11 @@ const FindWorkspace = () => {
    <>
    <section>
     <div className="container">
-        <div className="flex  pb-[68px] xl:flex-row flex-col-reverse    w-full gap-[24px] xl:justify-between  font-inter items-center">
+        <div className="flex pb-[30px] md:pb-[68px] xl:flex-row flex-col-reverse    w-full gap-[24px] xl:justify-between  font-inter items-center">
             <div className="flex flex-col gap-[30px]  md:gap-[40px] max-w-[659px]">
                 <div className="flex flex-col gap-3 md:gap-4"> 
                     <h4 className='font-medium xl:text-[64px] lg:text-[54px] text-[32px]  leading-[120%]'>Find Your Perfect Workspace, Anytime.</h4>
-              <p className='xl:text-[24px] lg:text-[20px] text-sm max-w-[520px] w-full text-darkGray left-[130%]'>Discover and book coworking spaces that match your style and needs.</p></div>
+              <p className='xl:text-[24px] lg:text-[20px] text-sm max-w-[520px] w-full text-darkGray leading-[130%]'>Discover and book coworking spaces that match your style and needs.</p></div>
              
               <div className="md:pt-[30px] md:pr-[24px] flex flex-col gap-[27px] md:pb-[30px] md:pl-6 py-5 px-5 xl:max-w-[563px] w-full">
                  <div className="flex justify-between">
@@ -27,7 +27,7 @@ const FindWorkspace = () => {
                  </div>
               </div>
             </div>
-            {/* <img className="z-40 xl:translate-x-16  xl:w-[666px] xl:rounded-none rounded-[24px] xl:h-[688px] md:w-[566px] md:h-[588px] w-[335px] h-[316px]"  src="/images/full-shot-students.png" alt="full-shot-students" /> */}
+            <img className="z-40 xl:translate-x-16  xl:w-[666px] xl:rounded-none rounded-[24px] xl:h-[688px] md:w-[566px] md:h-[588px] w-[335px] h-[316px]"  src="/images/full-shot-students.png" alt="full-shot-students" />
         </div>
     </div>
    </section>
