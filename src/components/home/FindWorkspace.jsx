@@ -12,7 +12,7 @@ const FindWorkspace = () => {
                     <h4 className='font-medium xl:text-[64px] lg:text-[54px] text-[32px]  leading-[120%]'>Find Your Perfect Workspace, Anytime.</h4>
               <p className='xl:text-[24px] lg:text-[20px] text-sm max-w-[520px] w-full text-darkGray leading-[130%]'>Discover and book coworking spaces that match your style and needs.</p></div>
              
-              <div className="md:pt-[30px] md:pr-[24px] flex flex-col gap-[27px] md:pb-[30px] md:pl-6 py-5 px-5 xl:max-w-[563px] w-full">
+              <div className="md:pt-[30px] md:pr-[24px] gradient-border rounded-[24px] flex flex-col gap-[27px] md:pb-[30px] md:pl-6 py-5 px-5 xl:max-w-[563px] w-full">
                  <div className="flex justify-between">
                     <CustomInput iconClass="lg:w-[24px] lg:h-[24px]  w-[16px] h-[16px]" className="md:max-w-[228px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] flex gap-[10px] lg:text-[18px] lg:leading-[130%] max-w-[135px] w-full text-black" image={"/svg/location.svg"} placeholder="Enter city or area" type="text" />
                     <CustomInput  className="md:max-w-[255px] flex gap-[10px] p-[12px_0_12px_14px] text-[10px] lg:p-[12px_0_12px_24px] lg:text-[18px] lg:leading-[130%] max-w-[140px]  w-full text-black" image={"/svg/date.svg"} placeholder="Select date" type="number"/>

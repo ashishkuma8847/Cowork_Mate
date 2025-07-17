@@ -9,7 +9,7 @@ const HowItWorks = () => {
             <section>
                 <div className="container">
                     <div className="flex gap-[30px] md:gap-[60px] flex-col justify-center items-center my-[30px] md:my-[60px] font-inter">
-                        <Heading title={"How It Works"} pagragraph={"Booking a coworking space has never been easier."}/>
+                        <Heading   title={"How It Works"} cMain={" max-w-[647px] w-full"} cParagraph={"w-[232px]  sm:w-full"}  pagragraph={"Booking a coworking space has never been easier."}/>
                         <div className="flex justify-between  w-full ">
                             <Swiper
                             spaceBetween={32}
@@ -36,7 +36,7 @@ const HowItWorks = () => {
 
                                     },
                                     1156: {
-                                        slidesPerView: 2.7,
+                                        slidesPerView: 3,
                                     },
                                     1450: {
                                         slidesPerView: 3,
