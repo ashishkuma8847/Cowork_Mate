@@ -43,58 +43,82 @@
             "text": "Arrive, connect to Wi-Fi, grab coffee, and start being productive!"
         }
     ],
-    "UserSay":[
-    {
-        "logo":"/svg/smallprofile.svg",
-        "name":"Sakshi Mehra",
-        "work":"Freelance Designer – Delhi",
-        "info":"CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.8",
-        "date":"15May,2024"
-    },
-     {
-        "logo":"/svg/smallprofiletwo.svg",
-        "name":"Aarav Bansal",
-        "work":"Startup Founder – Bangalore",
-        "info":"I loved how fast I could find a place for my team meetings. No more messy rentals! messy rentals!",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.7",
-        "date":"20March,2024"
-    }, {
-        "logo":"/svg/smallprofilethree.svg",
-        "name":"Neha Kapoor",
-        "work":"Remote Project Manager – Pune",
-        "info":"Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.9",
-        "date":"10March,2024"
-    },
-    {
-        "logo":"/svg/smallprofile.svg",
-        "name":"Sakshi Mehra",
-        "work":"Freelance Designer – Delhi",
-        "info":"CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.8",
-        "date":"15 May,2024"
-    },
-     {
-        "logo":"/svg/smallprofiletwo.svg",
-        "name":"Aarav Bansal",
-        "work":"Startup Founder – Bangalore",
-        "info":"I loved how fast I could find a place for my team meetings. No more messy rentals! find a place for my team meetings. No more messy rentals!",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.7",
-        "date":"20 March,2024"
-    }, {
-        "logo":"/svg/smallprofilethree.svg",
-        "name":"Neha Kapoor",
-        "work":"Remote Project Manager – Pune",
-        "info":"Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
-        "ratinglogo":"/svg/starrounded.svg",
-        "ratting":"4.9",
-        "date":"10 March,2024"
-    }
-]
+    "UserSay": [
+        {
+            "logo": "/svg/smallprofile.svg",
+            "name": "Sakshi Mehra",
+            "work": "Freelance Designer – Delhi",
+            "info": "CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.8",
+            "date": "15May,2024"
+        },
+        {
+            "logo": "/svg/smallprofiletwo.svg",
+            "name": "Aarav Bansal",
+            "work": "Startup Founder – Bangalore",
+            "info": "I loved how fast I could find a place for my team meetings. No more messy rentals! messy rentals!",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.7",
+            "date": "20March,2024"
+        },
+        {
+            "logo": "/svg/smallprofilethree.svg",
+            "name": "Neha Kapoor",
+            "work": "Remote Project Manager – Pune",
+            "info": "Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.9",
+            "date": "10March,2024"
+        },
+        {
+            "logo": "/svg/smallprofile.svg",
+            "name": "Sakshi Mehra",
+            "work": "Freelance Designer – Delhi",
+            "info": "CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.8",
+            "date": "15 May,2024"
+        },
+        {
+            "logo": "/svg/smallprofiletwo.svg",
+            "name": "Aarav Bansal",
+            "work": "Startup Founder – Bangalore",
+            "info": "I loved how fast I could find a place for my team meetings. No more messy rentals! find a place for my team meetings. No more messy rentals!",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.7",
+            "date": "20 March,2024"
+        },
+        {
+            "logo": "/svg/smallprofilethree.svg",
+            "name": "Neha Kapoor",
+            "work": "Remote Project Manager – Pune",
+            "info": "Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.9",
+            "date": "10 March,2024"
+        }
+    ],
+    "questions": [
+        {
+            "question": "Q 1. How do I book a workspace on CoWorkMate?",
+            "answer": "A. Simply search by location and date, browse available spaces, and click “Book Now.” You’ll receive instant confirmation via email."
+        },
+        {
+            "question": "Q 2. Can I cancel or reschedule my booking?",
+            "answer": "A. Yes! You can cancel or modify bookings from your dashboard. Free cancellation is available up to 24 hours before the start time."
+        },
+        {
+            "question": "Q 3. What amenities are included in a workspace?",
+            "answer": "A. Each space varies, but most include high-speed Wi-Fi, power outlets, coffee, printers, and access to common areas."
+        },
+        {
+            "question": "Q 4. Do I need a subscription to use CoWorkMate?",
+            "answer": "A. No subscription needed! You only pay for the time and space you use. Simple and flexible."
+        },
+        {
+            "question": "Q 5. Is customer support available if I have issues?",
+            "answer": "A. Absolutely. We offer 24/7 live chat and email support to assist you before, during, and after your booking."
+        }
+    ]
 }
