@@ -120,5 +120,61 @@
             "question": "Q 5. Is customer support available if I have issues?",
             "answer": "A. Absolutely. We offer 24/7 live chat and email support to assist you before, during, and after your booking."
         }
+    ],
+    "TopWorkspace":[
+        {
+            "headimg":"/images/computer-laptop-office.png",
+            "title":"UrbanHive Workspace",
+            "location":"Bangalore, India",
+            "benifits":[
+                {
+                    "title":"Fast WiFi"
+                },
+                {
+                    "title":"Private Office"
+                },
+                {
+                    "title":"24/7 Access"
+                }
+            ],
+            "raiting":"4.9 (210 reviews)",
+            "price":"₹ 400/hr"
+        },
+        {
+            "headimg":"/images/flower-poat.png",
+            "title":"NovaDesk Studios",
+            "location":"Mumbai, India",
+            "benifits":[
+                {
+                    "title":"Day Pass"
+                },
+                {
+                    "title":"Meeting Room"
+                },
+                {
+                    "title":"Coffee Included"
+                }
+            ],
+            "raiting":"4.7 (132 Reviews)",
+            "price":" ₹199/hr"
+        },
+        {
+            "headimg":"/images/best-furniture.png",
+            "title":"WorkNest Collective",
+            "location":"Delhi, India",
+            "benifits":[
+                {
+                    "title":"Pet Friendly"
+                },
+                {
+                    "title":"Shared Desk"
+                },
+                {
+                    "title":" Air Conditioning"
+                }
+            ],
+            "raiting":"4.8 (158 Reviews)",
+            "price":"₹180/hr"
+        }
     ]
 }
