@@ -1,0 +1,109 @@
+{
+    "pages":[
+        {
+            "title":"Home",
+            "path":"/"
+        },
+        {
+            "title":"About",
+            "path":"/About"
+        },
+        {
+            "title":"How It Works",
+            "path":"/HowItWorks"
+        },
+        {
+            "title":"Blog",
+            "path":"/Blog"
+        },
+        {
+            "title":"Contact",
+            "path":"/Contact"
+        }
+    ],
+    "pagespoup":[
+        {
+            "title":"Home",
+            "path":"/"
+        },
+        {
+            "title":"About",
+            "path":"/About"
+        },
+        {
+            "title":"How It Works",
+            "path":"/HowItWorks"
+        },
+        {
+            "title":"Blog",
+            "path":"/Blog"
+        },
+        {
+            "title":"Contact",
+            "path":"/Contact"
+        },
+         {
+            "title":"My Account"
+        }
+    ],
+    "images":[
+        {
+            "pathimg":"/svg/notification.svg"
+        },
+        {
+            "pathimg":"/svg/user.svg"
+        },
+        {
+            "pathimg":"/svg/search.svg"
+        }
+    ],
+    "accountdails":[
+        {
+            "title":"My Profile",
+            "pathimg":"/svg/user.svg",
+            "path":""
+        },
+         {
+            "title":"Account Settings",
+            "pathimg":"/svg/account-setting.svg",
+            "path":""
+        },
+         {
+            "title":"Notifications",
+            "pathimg":"/svg/notification.svg",
+            "path":""
+        },
+         {
+            "title":"Dashboard",
+            "pathimg":"/svg/dashboard.svg",
+            "path":"/Dashboard"
+        },
+         {
+            "title":"Help Center",
+            "pathimg":"/svg/formkit_date.svg",
+            "path":""
+        },
+         {
+            "title":"Logout",
+            "pathimg":"/svg/logout.svg",
+            "path":""
+        }
+    ],
+    "notify":[
+        {
+            "img":"/svg/formkit_date.svg",
+            "titile":"Your booking for WorkNest on June 28,2025 has been conirmed.",
+            "time":"2h ago"
+        },
+        {
+            "img":"/svg/star.svg",
+            "titile":"A new workspace has been added to your saved list named EcoHub.",
+            "time":"2h ago"
+        },
+        {
+            "img":"/svg/tags.svg",
+            "titile":"Rate your booking at NovaDesk on June 20,2025.",
+            "time":"2d ago"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "company": [
+        {
+            "name": "Cowork Mate",
+            "image": "headlogo.png",
+            "description": "CoWorkMate helps you find and book the perfect coworking space anywhere, anytime.",
+            "contact": {
+                "email": " support@coworkmate.com",
+                "phone": "Phone : +91 98765 43210",
+                "address": "address : Mumbai, India"
+            }
+        }
+    ],
+    "sections": [
+        {
+            "title": "Quick Links",
+            "links": [
+                {
+                    "linkdata": "Home"
+                },
+                {
+                    "linkdata": "Browse Workspaces"
+                },
+                {
+                    "linkdata": "How It Works"
+                },
+                {
+                    "linkdata": "Blog"
+                },
+                {
+                    "linkdata": "Contact"
+                }
+            ]
+        },
+        {
+            "title": "Explore",
+            "links": [
+                {
+                    "linkdata": "For Freelancers"
+                },
+                {
+                    "linkdata": "For Teams"
+                },
+                {
+                    "linkdata": "Private Cabins"
+                },
+                {
+                    "linkdata": "Daily Passes"
+                },
+                {
+                    "linkdata": "Book by City"
+                }
+            ]
+        },
+        {
+            "title": "Support",
+            "links": [
+                {
+                    "linkdata": "FAQ"
+                },
+                {
+                    "linkdata": "Help Center"
+                },
+                {
+                    "linkdata": "Cancellation Policy"
+                },
+                {
+                    "linkdata": "Privacy Policy"
+                },
+                {
+                    "linkdata": "Terms & Conditions"
+                }
+            ]
+        }
+    ]
+}

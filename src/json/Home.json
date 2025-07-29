@@ -1,0 +1,180 @@
+{
+    "HowItWorks": [
+        {
+            "img": "/svg/mdi_location.svg",
+            "title": "Browse & Select",
+            "paragraph": "Search by city, filter by amenities, and discover the perfect space."
+        },
+        {
+            "img": "/svg/dark_date.svg",
+            "title": "Choose Your Time",
+            "paragraph": "Search by city, filter by amenities, and discover the perfect space."
+        },
+        {
+            "img": "/svg/check.svg",
+            "title": "Check In & Focus",
+            "paragraph": "Arrive, connect to Wi-Fi, grab coffee, and start being productive!"
+        }
+    ],
+    "WhyChoose": [
+        {
+            "logo": "/svg/clockoutline.svg",
+            "title": "Book in Minutes",
+            "text": "Search by city, filter by amenities, and discover the perfect space."
+        },
+        {
+            "logo": "/svg/checkfill.svg",
+            "title": "Verified Spaces",
+            "text": "Pick a date, time, and desk type. Instant confirmation on payment."
+        },
+        {
+            "logo": "/svg/materialsymbols.svg",
+            "title": "Transparent Pricing",
+            "text": "Arrive, connect to Wi-Fi, grab coffee, and start being productive!"
+        },
+        {
+            "logo": "/svg/wifiadd.svg",
+            "title": "Reliable Amenities",
+            "text": "Pick a date, time, and desk type. Instant confirmation on payment."
+        },
+        {
+            "logo": "/svg/calloutline.svg",
+            "title": "Customer Support",
+            "text": "Arrive, connect to Wi-Fi, grab coffee, and start being productive!"
+        }
+    ],
+    "UserSay": [
+        {
+            "logo": "/svg/smallprofile.svg",
+            "name": "Sakshi Mehra",
+            "work": "Freelance Designer – Delhi",
+            "info": "CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.8",
+            "date": "15May,2024"
+        },
+        {
+            "logo": "/svg/smallprofiletwo.svg",
+            "name": "Aarav Bansal",
+            "work": "Startup Founder – Bangalore",
+            "info": "I loved how fast I could find a place for my team meetings. No more messy rentals! messy rentals!",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.7",
+            "date": "20March,2024"
+        },
+        {
+            "logo": "/svg/smallprofilethree.svg",
+            "name": "Neha Kapoor",
+            "work": "Remote Project Manager – Pune",
+            "info": "Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.9",
+            "date": "10March,2024"
+        },
+        {
+            "logo": "/svg/smallprofile.svg",
+            "name": "Sakshi Mehra",
+            "work": "Freelance Designer – Delhi",
+            "info": "CoWorkMate made it easy to find quiet workspaces while traveling. The booking process is so smooth!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.8",
+            "date": "15 May,2024"
+        },
+        {
+            "logo": "/svg/smallprofiletwo.svg",
+            "name": "Aarav Bansal",
+            "work": "Startup Founder – Bangalore",
+            "info": "I loved how fast I could find a place for my team meetings. No more messy rentals! find a place for my team meetings. No more messy rentals!",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.7",
+            "date": "20 March,2024"
+        },
+        {
+            "logo": "/svg/smallprofilethree.svg",
+            "name": "Neha Kapoor",
+            "work": "Remote Project Manager – Pune",
+            "info": "Reliable Wi-Fi, coffee, and a productive environment. I use CoWorkMate 3 times a week!”",
+            "ratinglogo": "/svg/starrounded.svg",
+            "ratting": "4.9",
+            "date": "10 March,2024"
+        }
+    ],
+    "questions": [
+        {
+            "question": "Q 1. How do I book a workspace on CoWorkMate?",
+            "answer": "A. Simply search by location and date, browse available spaces, and click “Book Now.” You’ll receive instant confirmation via email."
+        },
+        {
+            "question": "Q 2. Can I cancel or reschedule my booking?",
+            "answer": "A. Yes! You can cancel or modify bookings from your dashboard. Free cancellation is available up to 24 hours before the start time."
+        },
+        {
+            "question": "Q 3. What amenities are included in a workspace?",
+            "answer": "A. Each space varies, but most include high-speed Wi-Fi, power outlets, coffee, printers, and access to common areas."
+        },
+        {
+            "question": "Q 4. Do I need a subscription to use CoWorkMate?",
+            "answer": "A. No subscription needed! You only pay for the time and space you use. Simple and flexible."
+        },
+        {
+            "question": "Q 5. Is customer support available if I have issues?",
+            "answer": "A. Absolutely. We offer 24/7 live chat and email support to assist you before, during, and after your booking."
+        }
+    ],
+    "TopWorkspace":[
+        {
+            "headimg":"ashish1753075047357.png",
+            "title":"UrbanHive Workspace",
+            "location":"Bangalore, India",
+            "benifits":[
+                {
+                    "title":"Fast WiFi"
+                },
+                {
+                    "title":"Private Office"
+                },
+                {
+                    "title":"24/7 Access"
+                }
+            ],
+            "raiting":"4.9 (210 reviews)",
+            "price":"₹ 400/hr"
+        },
+        {
+            "headimg":"ashish1753075105991.png",
+            "title":"NovaDesk Studios",
+            "location":"Mumbai, India",
+            "benifits":[
+                {
+                    "title":"Day Pass"
+                },
+                {
+                    "title":"Meeting Room"
+                },
+                {
+                    "title":"Coffee Included"
+                }
+            ],
+            "raiting":"4.7 (132 Reviews)",
+            "price":" ₹199/hr"
+        },
+        {
+            "headimg":"ashish1753075105988.png",
+            "title":"WorkNest Collective",
+            "location":"Delhi, India",
+            "benifits":[
+                {
+                    "title":"Pet Friendly"
+                },
+                {
+                    "title":"Shared Desk"
+                },
+                {
+                    "title":" Air Conditioning"
+                }
+            ],
+            "raiting":"4.8 (158 Reviews)",
+            "price":"₹180/hr"
+        }
+    ]
+}
