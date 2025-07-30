@@ -13,6 +13,7 @@ import Login from './components/Login_signup/Login';
 import Signup from './components/Login_signup/Signup';
 import Forgetpassword from './components/Login_signup/Forgetpassword';
 import Changepassword from './components/Login_signup/Changepassword';
+import Workspace from './pages/Workspace';
 
 // ✅ Custom layout wrapper to handle Header/Footer conditionally
 const LayoutWrapper = ({ children }) => {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/workSpace" element={<Workspace />} />
           <Route path="/forgetpassword" element={<Forgetpassword />} />
           <Route path="/changepassword" element={<Changepassword />} />
         </Routes>

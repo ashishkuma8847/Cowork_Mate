@@ -30,7 +30,7 @@ const CustomButton = ({
   children,
   className = '',
 }) => {
-  const baseClasses = 'px-[32px] py-[14px] rounded-[12px]  font-[500] text-[14px] transition duration-300 flex items-center justify-center gap-2';
+  const baseClasses = 'px-[32px] py-[14px] rounded-[12px]  font-[500] text-[14px] transition duration-300 flex  items-center justify-center gap-2';
 
   const typeClasses = {
     default: 'border border-[#383561] text-[#555555] bg-white hover:bg-gray-100',
@@ -41,7 +41,7 @@ const CustomButton = ({
     <button
       onClick={onClick}
       disabled={isLoading || disabled}
-      className={`${baseClasses} ${typeClasses[type]} font-inter ${isLoading || disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
+      className={`${baseClasses} ${typeClasses[type]} font-inter ${isLoading || disabled ? 'opacity-50 cursor-not-allowed' : ' '} ${className}`}
     >
       {isLoading ? <Spinner /> : children}
     </button>

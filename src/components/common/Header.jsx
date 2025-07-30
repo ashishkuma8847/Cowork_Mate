@@ -210,7 +210,9 @@ const Header = () => {
                       : " p-0 -z-50 opacity-0"
                   } w-[320px] transition-all duration-200 bg-white absolute top-8 right-2   flex flex-col  font-inter  gap-[30px] py-[24px] rounded-[12px]`}
                 >
-                  <div className="flex flex-col gap-[14px] ">
+                  { logout&& 
+                    <>
+                    <div className="flex flex-col gap-[14px] ">
                     <h1 className="font-semibold text-xl leading-[120%]">
                       Log Out
                     </h1>
@@ -226,15 +228,22 @@ const Header = () => {
                     />
                     <CustomButton className="py-[14px] px-[32px] font-medium text-sm leading-[100%]" children={"Log Out"} type="gradient" />
                   </div>
+                    </>
+
+                  }
+                  
                 </div>
                   {/* notification popup */}
-                   <div className={`${notification ? " z-50 opacity-100" :" -z-50 opacity-0" } transition-all duration-200 w-[319px] absolute right-3 top-8  pt-[23px] pb-[88px]  rounded-md bg-white `}>
+                   <div className={`${notification ? " z-50 opacity-100" :" -z-50 opacity-0 "  } transition-all duration-200 w-[319px] absolute right-3 top-8  pt-[23px] pb-[88px]  rounded-md bg-white `}>
+                    {
+
                      <div className=" flex pr-[20px]  pl-[20px] pb-[22px] border-b border-[#38356133] justify-between items-center ">
                           <h4 className={`${notification ? "text-[18px]" : "text-[0px]"} font-inter font-medium  leading-[130%] `}>Notifications</h4>
                           <button className={`${notification ? "text-[16px]" : "text-[0px]"} font-inter font-medium  leading-[130%] text-golden`}>Clear All</button>
                      </div>
-                     <div className="pr-[15px] flex  pt-[20px] flex-col pl-[15px] font-inter">
-                      {
+                    }
+                     <div className={` ${notification ? " z-50 opacity-100" :" -z-50 opacity-0" } relative pr-[15px] flex  pt-[20px] flex-col pl-[15px] font-inter`}>
+                      {notification &&
                         pages.notify.map((item,index)=>(
                           <div key={index + item}>
                           {
