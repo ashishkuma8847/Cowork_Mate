@@ -1,6 +1,7 @@
 import { SwiperSlide, Swiper } from 'swiper/react'
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from 'react-router-dom';
 const Chandigarh = ({ chandigarh }) => {
     return (
         <>
@@ -40,13 +41,14 @@ const Chandigarh = ({ chandigarh }) => {
                         <p>Loading...</p>
                     ) : (chandigarh.map((item, index) => {
                         const formattedPrice = item.price.toLocaleString("en-IN");
-                        
+                         
                         return(
                         <SwiperSlide 
                             key={index}
                             className=" mt-[32px] rounded-[12px] overflow-x-hidden mb-[30px] md:mb-[50px]  max-w-[419px] w-full"
                         >
-                            <img className='cursor-pointer' src={`http://localhost:3000/upload/${item.mainImgPath}`} alt={item.text || "workspace image"} />
+                            <Link to={`/workspace/detail?pages=${item.id}`}>  <img className='cursor-pointer' src={`http://localhost:3000/upload/${item.mainImgPath}`} alt={item.text || "workspace image"} /></Link>
+                          
                             <div className="font-inter ">
                                 <h2 className="pb-[6px] pt-3 md:pt-[14px]  font-medium text-lg sm:text-[22px] leading-[100%]">
                                     {item.name}
