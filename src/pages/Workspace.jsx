@@ -9,20 +9,21 @@ import Kangra from "../components/workspace/Kangra"
 import Dheradun from "../components/workspace/Dheradun"
 
 const Workspace = () => {
-    const [data, setdata] = useState([])
+  const [data, setData] = useState([]);
 
-    const hndeleget = async () => {
-        try {
-            const res = await axios.get("http://localhost:3000/api/getallproduct")
-            console.log(res.data.data)
-            setdata(res.data.data)
-        } catch (error) {
-            console.error(error);
-        }
-    }
-    useEffect(() => {
-        hndeleget()
-    }, [])
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/api/getallproduct");
+        console.log("Fetched products:", res.data.data);
+        setData(res.data.data);
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    };
+
+    fetchProducts(); 
+  }, []);
     const delhi = data.filter((item)=>item.catogry === "Delhi")
     const chandigarh = data.filter((item)=>item.catogry === "Chandigarh")
     const noyda = data.filter((item)=>item.catogry === "Noyda")
