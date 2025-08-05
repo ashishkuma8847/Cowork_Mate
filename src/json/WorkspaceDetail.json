@@ -1,0 +1,21 @@
+{
+    "data":[
+        {
+            "title":"Expential check -inexperiance",
+            "paragraph":"Recent guest gave the check in process a5-star rating.",
+            "img":"/svg/keyround.svg"
+        },
+         {
+            "title":"Unbeatable location",
+            "paragraph":"100% of guest in the past ear gave this location a 5-star rating.",
+            "img":"/svg/locationoutlined.svg"
+
+        },
+         {
+            "title":"Office in area",
+            "paragraph":"Recent guest gave the check in process a5-star rating.",
+            "img":"/svg/guidanceoffice.svg"
+
+        }
+    ]
+}

@@ -3,25 +3,27 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Placeofferr from "../json/placeoffer.json"
 import Calendar from '../components/common/cards/calender'
+import detailjson from "../json/WorkspaceDetail.json"
 
 const Workspacedetails = () => {
     const [data, setdata] = useState([])
     const query = new URLSearchParams(useLocation().search)
     const id = query.get("pages")
     useEffect(() => {
-    const hndeleget = async () => {
-        try {
-            const res = await axios.get(`http://localhost:3000/api/getoneproduct/${id}`)
-            console.log(res.data.data)
-            setdata([res.data.data])
-        } catch (error) {
-            console.error(error);
+        const hndeleget = async () => {
+            try {
+                const res = await axios.get(`http://localhost:3000/api/getoneproduct/${id}`)
+                console.log(res.data.data)
+                setdata([res.data.data])
+            } catch (error) {
+                console.error(error);
+            }
         }
-    }
         hndeleget()
     }, [id])
     console.log(data)
     const baseurl = "http://localhost:3000/upload"
+
 
     return (
         <>
@@ -30,10 +32,10 @@ const Workspacedetails = () => {
                     {
                         data.map((item, index) => (
                             <div key={index}>
-                                <h1 className='font-inter font-bold text-[26px] py-[50px]'>{item.name}</h1>
+                                <h1 className='font-inter font-bold text-[26px] md:block hidden py-[50px]'>{item.name}</h1>
                                 <div className="flex gap-8">
-                                    <img className=' max-w-[758px] w-full rounded-l-2xl ' src={`${baseurl}/${item.mainImgPath}`} alt="" />
-                                    <div className="grid grid-cols-2 gap-8">
+                                    <img className=' max-w-[758px] w-full rounded-none xl:rounded-l-2xl' src={`${baseurl}/${item.mainImgPath}`} alt="" />
+                                    <div className="hidden xl:grid grid-cols-2 gap-8  ">
                                         {item.detailImgPath.map((item, index) => (
                                             <div key={index}>
                                                 <img src={`${baseurl}/${item.img}.png`} alt="" />
@@ -42,19 +44,20 @@ const Workspacedetails = () => {
                                 </div>
                                 <div className="max-w-[758px] w-full">
                                     <div className="pt-10 flex flex-col gap-2">
-                                        <h1 className='font-inter font-medium text-[22px]'>  {item.catogry} Filed Office,India</h1>
-                                        <h1 className='font-inter font-normal text-xl text-darkGray'>Lorem Ipsum is simply dummy text of the printing.</h1>
+                                        <h1 className='font-inter font-medium md:text-[22px] text-xl '>  {item.catogry} Filed Office,India</h1>
+                                        <h1 className='font-inter font-normal md:text-xl text-sm text-darkGray'>Lorem Ipsum is simply dummy text of the printing.</h1>
                                     </div>
-                                    <div className="flex max-w-[757px] w-full items-center  border border-black rounded-2xl  py-10 px-10 mt-[60px] mb-10">
-                                        <h4 className='max-w-[81px] w-full font-inter font-medium text-lg leading-[120%] text-center'>Guest Favourite</h4>
-                                        <h4 className='max-w-[359px] w-full font-inter font-medium text-base leading-[120%] ml-[51px] mr-5'>One of the most loved homes on Cowork Mate, according to guests</h4>
-                                        <div className="flex flex-col max-w-[58px] w-full text-center gap-3">
+                                    <div className="flex max-w-[757px] w-full items-center flex-row-reverse md:flex-row   justify-between border border-black rounded-2xl  py-10 px-10 mt-[60px] mb-10">
+                                        <h4 className='  font-inter  font-medium text-lg hidden md:block leading-[120%] text-center'><div className="">Guest</div><div className="">Favourite</div> </h4>
+                                        <h4 className='max-w-[359px] w-full lg:block hidden font-inter font-medium text-base leading-[120%] ml-[51px] mr-5'>One of the most loved homes on Cowork Mate, according to guests</h4>
+                                        <div className="flex flex-col  text-center gap-3">
                                             <h4 className='w-full font-inter font-medium text-base leading-[120%]'>{item.raiting}</h4>
                                             <img src={`${baseurl}/ratingfivestar.svg`} alt="Rating" />
                                         </div>
-                                        <span className='w-[1px] h-10 block bg-lite-gray mx-[30px]'></span>
-                                        <div className="flex flex-col max-w-[48px] w-full text-center gap-2">
-                                            <h4 className='w-full font-inter font-medium text-base leading-[120%]'>5.0</h4>
+                                         <h4 className='  font-inter  font-medium text-lg md:hidden block leading-[120%] text-center'><div className="">Guest</div><div className="">Favourite</div> </h4>
+                                        <div className='w-[1px] h-10  bg-lightGray mx-[30px] lg:block hidden'></div>
+                                        <div className="flex flex-col  border-r border-lightGray pr-[42px] mr-[42px] md:p-0 md:m-0  text-center gap-2">
+                                            <h4 className='w-full  font-inter  font-medium text-base leading-[120%]'>5.0</h4>
                                             <h4 className='w-full font-inter font-medium text-xs text-darkGray leading-[120%]'>Reviews</h4>
                                         </div>
                                     </div>
@@ -66,25 +69,20 @@ const Workspacedetails = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col py-10 gap-10 border-b border-darkGray pb-5 ">
-                                        <div className="flex gap-7">
-                                            <img src="/svg/keyround.svg" alt="key.svg" />
-                                            <div className="flex flex-col gap-2">
-                                                <h4 className='font-inter font-medium text-sm'>Expential check -inexperiance</h4>
-                                                <h4 className='font-inter font-normal text-sm text-darkGray'>Recent guest gave the check in process a5-star rating.</h4>
-                                            </div>
-                                        </div><div className="flex gap-7">
-                                            <img src="/svg/locationoutlined.svg" alt="key.svg" />
-                                            <div className="flex flex-col gap-2">
-                                                <h4 className='font-inter font-medium text-sm'>Unbeatable location</h4>
-                                                <h4 className='font-inter font-normal text-sm text-darkGray'>100% of guest in the past ear gave this location a 5-star rating.</h4>
-                                            </div>
-                                        </div><div className="flex gap-7">
-                                            <img src="/svg/guidanceoffice.svg" alt="key.svg" />
-                                            <div className="flex flex-col gap-2">
-                                                <h4 className='font-inter font-medium text-sm'>Office in area</h4>
-                                                <h4 className='font-inter font-normal text-sm text-darGray'>Recent guest gave the check in process a5-star rating.</h4>
-                                            </div>
-                                        </div>
+                                        {
+                                            detailjson.data.map((item, index) => (
+                                                <div key={index + item}>
+                                                    <div className="flex gap-7">
+                                                        <img src={item.img} alt="key.svg" />
+                                                        <div className="flex flex-col gap-2">
+                                                            <h4 className='font-inter font-medium text-sm'>{item.title}</h4>
+                                                            <h4 className='font-inter font-normal text-sm text-darkGray'>{item.paragraph}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+
                                     </div>
                                     <div className="flex flex-col pt-10 border-b border-darkGray pb-10">
                                         <h1 className='font-inter font-medium text-[22px] leading-[150%] pb-2'>About this project</h1>
@@ -109,22 +107,22 @@ const Workspacedetails = () => {
                                         <div className="flex flex-col gap-[30px] border-b border-darkGray pb-10">
                                             <h1 className='font-inter font-medium text-[22px] leading-[150%]'>What this place offer</h1>
                                             <div className="grid grid-cols-2 gap-5 max-w-[655px] w-full">
-                                            {
-                                                Placeofferr.map((item, index) => (
-                                                    <div key={index + Date.now()}>
-                                                        <div className="flex gap-5 w-[261px]">
-                                                            <img src={`/svg/${item.img}`} alt="svg" />
-                                                            {
-                                                                item.title ?
-                                                                 <h4 className='font-medium text-base leading-[150%] text-darkGray'>{item.title}</h4>
-                                                                 :
-                                                                  <h4 className='font-medium line-through text-base leading-[150%] text-darkGray'>{item.cross}</h4>
-                                                            }
-                                                           
+                                                {
+                                                    Placeofferr.map((item, index) => (
+                                                        <div key={index + Date.now()}>
+                                                            <div className="flex gap-5 w-[261px]">
+                                                                <img src={`/svg/${item.img}`} alt="svg" />
+                                                                {
+                                                                    item.title ?
+                                                                        <h4 className='font-medium text-base leading-[150%] text-darkGray'>{item.title}</h4>
+                                                                        :
+                                                                        <h4 className='font-medium line-through text-base leading-[150%] text-darkGray'>{item.cross}</h4>
+                                                                }
+
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                ))
-                                            }
+                                                    ))
+                                                }
                                             </div>
                                         </div>
                                         <div className="flex flex-col pt-10 pb-10">
@@ -132,7 +130,7 @@ const Workspacedetails = () => {
                                                 <h4 className='font-inter font-medium text-[22px] leading-[150%]'>Select check-in date</h4>
                                                 <h4 className='font-inter font-normal text-xl leading-[150%]'>Add your travel dates for exact pricing</h4>
                                             </div>
-                                            <Calendar/>
+                                            <Calendar />
                                         </div>
                                     </div>
                                 </div>
