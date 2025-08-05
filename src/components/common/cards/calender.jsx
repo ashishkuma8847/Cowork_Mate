@@ -80,7 +80,7 @@ const MonthView = ({
             return (
               <div
                 key={index}
-                className="h-[16px] mx-auto w-full flex text-center justify-center   rounded-full text-[12px] font-normal leading-[150%] text-gray-400"
+                className="h-[16px] mx-auto w-full flex line-through text-center justify-center   rounded-full text-[12px] font-normal leading-[150%] text-gray-400"
               >
                 {monthDate.date(index - monthDate.startOf("month").day() + 1).date()}
               </div>
@@ -99,6 +99,7 @@ const MonthView = ({
               onClick={() => day && day !== "disabled" && onSelectDate(date)}
             >
               {day || ""}
+              
             </div>
           );
         })}
@@ -130,7 +131,7 @@ const SimpleDoubleCalendar = () => {
   const handleNextMonth = () => {
     setSecondMonth((prev) => prev.add(1, "month"));
   };
-
+console.log(fromDate,toDate)
   return (
     <>
     <section>
