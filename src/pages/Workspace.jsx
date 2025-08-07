@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react"
 import CustomButton from "../components/ui/CustomButton"
 import axios from "axios"
-import Delhi from "../components/workspace/Delhi"
-import Chandigarh from "../components/workspace/Chandigarh"
-import Noyda from "../components/workspace/Noyda"
-import Jaipur from "../components/workspace/Jaipur"
-import Kangra from "../components/workspace/Kangra"
-import Dheradun from "../components/workspace/Dheradun"
+import CardsWorkspace from "../components/workspace/CardsWorkspace"
 
 const Workspace = () => {
   const [data, setData] = useState([]);
@@ -55,12 +50,12 @@ const Workspace = () => {
                                 </div>
                             </div>
                         </div>
-                        <Delhi delhi={delhi}/>
-                        <Chandigarh chandigarh={chandigarh}/>
-                        <Noyda noyda={noyda}/>
-                        <Jaipur jaipur={jaipur}/>
-                        <Kangra kangra={kangra}/>
-                        <Dheradun dheradun={dheradun}/>
+                        <CardsWorkspace data={delhi}/>
+                        <CardsWorkspace data={chandigarh}/>
+                        <CardsWorkspace data={noyda}/>
+                        <CardsWorkspace data={jaipur}/>
+                        <CardsWorkspace data={kangra}/>
+                        <CardsWorkspace data={dheradun}/>
                     </div>
                 </div>
             </section>

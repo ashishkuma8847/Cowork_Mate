@@ -1,5 +1,8 @@
+import { useLocation } from "react-router-dom"
 import footerjson from "../../json/Footer.json"
 const Footer = () => {
+    const location = useLocation()
+    const type = location.pathname === "/workspace/detail"
   return (
             <>
             <div className="container grid grid-cols-1 md:grid-cols-2 gap-[30px] sm:gap-10 lg:gap-[100px]">
@@ -63,6 +66,10 @@ const Footer = () => {
                     <img src="/svg/linkedin.svg" alt="linkedin" />
                 </div>
             </div>
+            {
+                type &&  <div className="">sajdlasdlksajdk</div>
+            }
+           
         </>
   )
 }

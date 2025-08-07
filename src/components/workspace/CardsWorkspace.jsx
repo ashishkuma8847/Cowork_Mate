@@ -2,12 +2,13 @@ import { SwiperSlide, Swiper } from 'swiper/react'
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from 'react-router-dom';
-const Delhi = ({ delhi }) => {
+const CardsWorkspace = ({ data }) => {
+   const catogry =data.slice(0,1).map((item)=>item.catogry)
     return (
         <>
             <div className="flex items-center gap-[10px]">
                 <h5 className="font-inter font-semibold text-[22px] leading-[100%]">
-                    Available in Delhi
+                    Available in {catogry}
                 </h5>
                 <img src="/svg/arrowright.svg" alt="" />
             </div>
@@ -37,9 +38,9 @@ const Delhi = ({ delhi }) => {
                     },
                 }}>
                 {
-                    delhi.length === 0 ? (
+                    data.length === 0 ? (
                         <p>Loading...</p>
-                    ) : (delhi.map((item, index) => {
+                    ) : (data.map((item, index) => {
                         const formattedPrice = item.price.toLocaleString("en-IN");
                         
                         return(
@@ -75,4 +76,4 @@ const Delhi = ({ delhi }) => {
     )
 }
 
-export default Delhi
+export default CardsWorkspace

@@ -128,7 +128,7 @@ const Header = () => {
                       : "w-0 p-0 text-[0px] -z-50 opacity-0"
                   } font-inter  flex flex-col gap-[14px]  transition-all duration-200 sm:hidden  top-8 pt-[20px] pb-[32px]   bg-white rounded-md right-1`}
                 >
-                  {pages.pagespoup.map((item, index) => (
+                  {Click &&   pages.pagespoup.map((item, index) => (
                     
                     <NavLink key={index+item} onClick={() => setClick(false)} to={item.path}>
                       {index === 5 ? (
@@ -162,7 +162,7 @@ const Header = () => {
                       : " p-0 text-[0px] -z-50 opacity-0"
                   } font-inter  flex flex-col pl-[20px] w-[270px] gap-[12px] cursor-pointer  transition-all  duration-200 absolute top-8 pt-[20px] pb-[32px]   bg-white rounded-md right-2 `}
                 >
-                  {pages.accountdails.map((item, index) => (
+                  {dashbord && pages.accountdails.map((item, index) => (
                     <Link
                       onClick={() => setdashbord(false)}
                       className={`${
