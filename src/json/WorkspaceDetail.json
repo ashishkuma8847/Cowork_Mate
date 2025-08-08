@@ -1,21 +1,51 @@
 {
-    "data":[
+    "data": [
         {
-            "title":"Expential check -inexperiance",
-            "paragraph":"Recent guest gave the check in process a5-star rating.",
-            "img":"/svg/keyround.svg"
+            "title": "Expential check -inexperiance",
+            "paragraph": "Recent guest gave the check in process a5-star rating.",
+            "img": "/svg/keyround.svg"
         },
-         {
-            "title":"Unbeatable location",
-            "paragraph":"100% of guest in the past ear gave this location a 5-star rating.",
-            "img":"/svg/locationoutlined.svg"
-
+        {
+            "title": "Unbeatable location",
+            "paragraph": "100% of guest in the past ear gave this location a 5-star rating.",
+            "img": "/svg/locationoutlined.svg"
         },
-         {
-            "title":"Office in area",
-            "paragraph":"Recent guest gave the check in process a5-star rating.",
-            "img":"/svg/guidanceoffice.svg"
-
+        {
+            "title": "Office in area",
+            "paragraph": "Recent guest gave the check in process a5-star rating.",
+            "img": "/svg/guidanceoffice.svg"
+        }
+    ],
+    "raiting": [
+        {
+            "name": "Cleanliness",
+            "ratingg": "5.0",
+            "image": "clean.svg"
+        },
+        {
+            "name": "Accuracy",
+            "ratingg": "5.0",
+            "image": "acctick.svg"
+        },
+        {
+            "name": "Check-in",
+            "ratingg": "5.0",
+            "image": "largekey.svg"
+        },
+        {
+            "name": "Communication",
+            "ratingg": "5.0",
+            "image": "communication.svg"
+        },
+        {
+            "name": "Location",
+            "ratingg": "5.0",
+            "image": "mapoutline.svg"
+        },
+        {
+            "name": "Value",
+            "ratingg": "5.0",
+            "image": "tag.svg"
         }
     ]
 }

@@ -8,12 +8,58 @@ import Bookcard from "../components/workspaceDetail.jsx/Bookcard";
 
 const Workspacedetails = () => {
   const baseurl = "http://localhost:3000/upload";
-   const [data, setdata] = useState([]);
-  const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [Great,setGreat]=useState(false)
+const [All,setAll]=useState(false)
+const [Kitchen,setKitchen]=useState(false)
+const [Airconditioner,setAirconditioner]=useState(false)
 
-  const query = new URLSearchParams(useLocation().search);
-  const id = query.get("pages"); // ?pages=productId
+const [Spacious,setSpacious]=useState(false)
+
+const [data, setdata] = useState([]);
+const [reviews, setReviews] = useState([]);
+const [loading, setLoading] = useState(true);
+
+const query = new URLSearchParams(useLocation().search);
+const id = query.get("pages"); // ?pages=productId
+
+function handlegrat() {
+  setGreat(true)
+ setAll(false)
+ setSpacious(false)
+ setKitchen(false)
+ setAirconditioner(false)
+}
+function handleall(){
+  setAll(true)
+  setGreat(false)
+  setSpacious(false)
+   setKitchen(false)
+ setAirconditioner(false)
+}
+function handleSpacious(){
+  setSpacious(true)
+  setAll(false)
+  setGreat(false)
+   setKitchen(false)
+ setAirconditioner(false)
+}
+function handleKitchen(){
+  setKitchen(true)
+  setSpacious(false)
+  setAll(false)
+  setGreat(false)
+ setAirconditioner(false)
+}
+function handleAirconditioner(){
+  setAirconditioner(true)
+  setKitchen(false)
+  setSpacious(false)
+  setAll(false)
+  setGreat(false)
+}
+
+
+
 
   useEffect(() => {
     const fetchProductAndReviews = async () => {
@@ -37,8 +83,32 @@ const Workspacedetails = () => {
     if (id) fetchProductAndReviews();
   }, [id]);
 
-console.log(data,"______________________",reviews)
   if (loading) return <p>Loading...</p>;
+
+
+
+
+
+const reveiewtoken = reviews.filter((item)=>item.category === "Greathospitality")
+const reveiewtoken1 = reviews.filter((item)=>item.category === "Spacious")
+const reveiewtoken2 = reviews.filter((item)=>item.category === "Kitchen")
+const reveiewtoken3 = reviews.filter((item)=>item.category === "Airconditioner")
+let reviewsmap = reviews;
+
+if (Great) {
+  reviewsmap = reveiewtoken;
+} else if (Spacious) {
+  reviewsmap = reveiewtoken1;
+} else if (All) {
+  reviewsmap = reviews;
+}else if (Kitchen ){
+  reviewsmap = reveiewtoken2
+}else if (Airconditioner){
+  reviewsmap = reveiewtoken3
+}
+console.log(reviews)
+
+
   return (
     <>
       <div className="container">
@@ -212,6 +282,96 @@ console.log(data,"______________________",reviews)
                   <Bookcard />
                 </div>
               </div>
+              <div className="border-b border-darkGray pb-[50px]">
+                <div className="flex border-t border-darkGray ">
+                  <div className="pt-[50px] flex w-full justify-center gap-3">
+                    <img src="/svg/leafleft.svg" alt="Leaf" />
+                    <h4 className='font-inter font-semibold text-8xl '>{item.raiting}</h4>
+                    <img src="/svg/leafright.svg" alt="Leaf" />
+                  </div>
+                </div>
+                <div className="flex flex-col pt-[30px] gap-3 pb-[70px]">
+                  <h4 className='flex w-full justify-center font-inter font-medium text-[22px]'>Guest favourite</h4>
+                  <h6 className=' w-full flex mx-auto text-center max-w-[415px] font-inter font-normal text-[22px] leading-[130%] text-darkGray'>This home is a guest favourite based on rating, reviews and religibility</h6>
+                </div>
+                <div className="flex">
+                  <div className="flex flex-col border-r border-[#D9D9D9]">
+                    <h2 className='font-medium font-inter text-sm pb-[10px]'>Overall rating</h2>
+                    <div className="font-inter font-medium text-xs gap-1 pr-3">
+                      <h6 className='flex items-center gap-1.5'>5<span className='block h-1 w-[114px]  bg-black'></span></h6>
+                      <h6 className='flex items-center gap-1.5'>4<span className='block h-1 w-[114px]  bg-[#D9D9D9]'></span></h6>
+                      <h6 className='flex items-center gap-1.5'>3<span className='block h-1 w-[114px]  bg-[#D9D9D9]'></span></h6>
+                      <h6 className='flex items-center gap-1.5'>2<span className='block h-1 w-[114px]  bg-[#D9D9D9]'></span></h6>
+                      <h6 className='flex items-center gap-1.5'>1<span className='block h-1 w-[114px]  bg-[#D9D9D9]'></span></h6>
+                    </div>
+                  </div>
+                  <div className="flex w-full">
+                    {
+                      detailjson.raiting.map((item, index) => (
+                        <>
+                        {
+                          index === 5 ? (<>
+                        <div className='flex flex-col  pl-[30px] w-full' key={index + Date.now()}>
+                          <h2 className='font-inter font-medium text-sm'>{item.name}</h2>
+                          <h2 className='font-inter font-medium text-lg pt-1 pb-[30px]'>{item.ratingg}</h2>
+                          <img className='h-6 w-6' src={`/svg/${item.image}`} alt="" />
+                        </div>
+                          
+                            </>):
+                            (<>
+                             <div className='flex flex-col border-r border-[#D9D9D9] pl-[30px] w-full' key={index + Date.now()}>
+                          <h2 className='font-inter font-medium text-sm'>{item.name}</h2>
+                          <h2 className='font-inter font-medium text-lg pt-1 pb-[30px]'>{item.ratingg}</h2>
+                          <img className='h-6 w-6' src={`/svg/${item.image}`} alt="" />
+                        </div>
+                            </>)
+                        }
+                        </>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>  
+              <div className="">
+                <div className="flex gap-4 py-[50px]  font-inter">
+                  <button onClick={()=>handleall()} className='bg-lightGray py-2.5 px-5 rounded-2xl'>All</button>
+                  <button onClick={()=> handlegrat()} className='bg-lightGray py-2.5 px-5 rounded-2xl'>Great hospitality <span className="text-darkGray">{reveiewtoken.length}</span>  </button>
+                  <button onClick={()=>handleSpacious()} className='bg-lightGray py-2.5 px-5 rounded-2xl'>Spacious <span className="text-darkGray">{reveiewtoken1.length}</span></button>
+                  <button  onClick={()=>handleKitchen()} className='bg-lightGray py-2.5 px-5 rounded-2xl'>Kitchen <span className="text-darkGray">{reveiewtoken2.length}</span></button>
+                  <button onClick={()=>handleAirconditioner()} className='bg-lightGray py-2.5 px-5 rounded-2xl'>Air conditioner <span className="text-darkGray">{reveiewtoken3.length}</span></button>
+                </div>
+                <div className="">
+                            <div className="grid grid-cols-2 gap-[50px]">
+                              {
+                                reviewsmap.map((item, index) => {
+                                  return (
+                                    <>
+                                      <div className='max-w-[586px] w-full ' key={index}>
+                                        <div className="flex gap-2.5 pb-5">
+                                          <img src={`${baseurl}/${item.reviewImg}.png`} alt="svg" />
+                                          <div className="flex flex-col gap-1">
+                                            <h1 className='font-inter font-medium text-base leading-[150%]'>{item.reviewCharacter}</h1>
+                                            <h1 className='font-inter font-normal text-sm leading-[130%] text-darkGray'>{item.reviewTimeWith} on Cowork Mate</h1>
+                                          </div>
+                                        </div>
+                                        <div className="flex pb-[22px] gap-2.5">
+                                          <img src={`${baseurl}/${item.reviewRaitingImg}`} alt="" />
+                                          <h4 className='font-inter font-normal text-sm leading-[130%] text-darkGray'>{item.reviewDate}</h4>
+                                        </div>
+                                        <h4 className='font-inter font-normal text-base leading-[130%] text-darkGray'>{item.reviewperagraph}</h4>
+                                        <button className='font-inter font-normal text-base leading-[130%] hover:underline cursor-pointer pt-5 '>Share More</button>
+                                      </div>
+                                    </>
+                                  )
+                                }
+                                )
+                              }
+                            </div>
+                    
+                </div>
+              </div>
+
+
             </div>
           ))}
         </div>
